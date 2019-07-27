@@ -1,0 +1,41 @@
+#for循环,循环list内容
+list = "abcd"
+for i in list:
+    print(i)
+	
+#for 加range循环,循环1到9
+for i in range(1,10):
+	print(i)
+	
+#for 加range循环,循环0到9
+for i in range(11):
+    print(i)
+	
+	
+#while循环 ,100减10步进循环，当w 大于10，一直循环
+w = 100
+while w > 10:
+    print(w)
+	w -=10 
+
+#break用法,循环0到9，条件a=5成立，停止循环,故只循环0到4
+for a in range(10):
+    if a ==5:
+	    break
+	print(a)
+
+#continue用法,循环0到9，条件a=5成立，跳过一次循环
+for a in range(10):
+    if a ==5:
+        continue
+    print(a)
+    
+#计算1到100的和
+a = 0
+b = 0
+while a < 101:
+    a +=1
+    print("The sum is {}".format(b))
+    b =b+a
+    
+    

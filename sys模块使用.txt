@@ -1,0 +1,18 @@
+#命令行参数获取方法是使用 sys 模块的 sys.argv，其中 sys.argv[0] 为脚本名称，
+# sys.argv[1] 为第一个参数
+#示例,文件名argtest.py
+#!/usr/bin/env python3
+
+import sys
+print(len(sys.argv))
+
+for arg in sys.argv: #后面循环打印每一个参数，第一个为 sys.argv[0] 就是运行的程序文件
+    print(arg)      #从 sys.argv[1] 开始才是程序的参数
+    
+#python3 argtest.py hello shiyanlou
+#执行结果
+3              #第一个数字表示命令行参数的数量
+argtest.py     
+hello
+shiyanlou
+
