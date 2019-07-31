@@ -1,0 +1,29 @@
+#file name = test1.py
+def java():
+    print(java)
+    
+def python():
+    print(python)
+
+
+    
+#file name = test2.py
+#引入test1.py 所有函数
+import test1
+from test1 import *
+#使用test1的python函数
+test1.python
+
+
+#引入test1.py中的java函数
+from test1 import java
+
+#起别名后使用
+import test1 as cs
+cs.java#就可以使用jave函数
+
+#推荐引入顺序
+在当前代码中引入模块，推荐的引入顺序为：标准库 > 第三方 > 自定义。
+也就是说：优先引用 Python 内置的模块，如果内置的模块没有需要的功能，
+再去查看第三方是否有现成的模块可以引用，如果依然没有才自定义模块进行使用。
+这样做主要是为了节省开发时间以及提高性能。
