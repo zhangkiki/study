@@ -1,0 +1,21 @@
+
+
+Python 拥有大量的第三方包，如果下载它们都需要通过源码下载岂不是很不方便？
+所以 Python 提供了包管理工具 pip，通过这个工具可以实现对 Python 主流的第三方模块的下载、安装、卸载等功能，
+它就像手机上的”应用市场“一样。
+
+pip 的官方网站是 PyPi，一般安装 Python 的时候就会自动安装 pip 工具。
+由于 Python 分为两个版本，因此 pip 也分为两个版本，一般 pip 对应的是 Python 2.x，pip3 对应的是 Python 3.x。
+
+pip 的常见命令如下：(也可以在 pip 前加上 sudo ，获取 root 权限)
+
+    显示版本和路径：pip3 --version
+    升级 pip：sudo pip3 install --upgrade pip
+    安装包：(sudo) pip3 install package，如果需要指定版本就是：
+	pip3 install package==1.0.3 (写具体的版本号)
+    卸载包：pip3 uninstall package
+    升级包：pip3 install --upgrade package，可以使用 ==,>=,<=,<,> 来指定版本号
+    查看安装已安装的包：pip3 list
+    把需要安装的一系列包写入 requirements.txt 文件中，然后执行：
+	pip3 install -r requirements.txt
+
