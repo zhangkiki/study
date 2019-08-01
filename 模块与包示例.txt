@@ -1,0 +1,9 @@
+#file name = /home/shiyanlou/louplus/test/hello.py
+
+message = "hello shiyanlou"
+
+#file name = /home/shiyanlou/moduletest.py
+
+from louplus.test.hello import message #引入louplus/test/hello.py 模块的message 变量
+
+print(message)
