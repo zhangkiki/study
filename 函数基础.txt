@@ -35,3 +35,55 @@ def functionname(params):
 
 现在我们希望改变这个 char_count() 函数，接受一个参数，并将所有的字母及出现的频次打印出来，
 这个程序我们实现在一个 Python 脚本文件中。
+
+
+首先使用 sublime 或 vim 等编辑器创建文件，在 Xfce 终端中输入下面的命令：
+
+$ cd /home/shiyanlou
+$ vim count_str.py
+
+依此输入下面的代码：
+
+#!/usr/bin/env python3
+
+def char_count(str_):
+    char_list = set(str_)
+    for char in char_list:
+        print(char, str_.count(char))
+
+if __name__ == '__main__':
+
+    s = input("Enter a string: ")
+
+    char_count(s)
+
+输入后保存并执行程序，程序会要求你输入一个字符串，
+并将打印出当前字符串中所有字符出现的频次。
+
+$ python3 count_str.py
+Enter a string: shiyanlou.com
+a 1
+i 1
+c 1
+y 1
+h 1
+l 1
+o 2
+. 1
+u 1
+s 1
+n 1
+m 1
+
+现在我们详细说下这个程序：
+
+    第一行的内容是说明需要使用 Python 3 的解释器执行当前的脚本
+    函数 char_count 没有返回值，就是没有 return 关键字，这是允许的，
+	返回值和参数对于函数都是可选的
+    char_count 中首先使用集合获得字符串中所有不重复的字符集
+    然后再使用 for 对集合进行遍历，每个字符都使用上一个例子中用到的 str.count() 计算频次
+    最后函数中使用 print 打印字符和对应的频次
+    if __name__ == '__main__': 这一句相当于 C 语言的 main 函数，作为程序执行的入口，
+	实际的作用是让这个程序 python3 count_str.py 这样执行时可以执行到 if __name__ == '__main__': 
+	这个代码块中的内容，当通过 import count_str 作为模块导入到其他代码文件时不会
+	执行if __name__ == '__main__':中的内容。
