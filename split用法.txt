@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+#split分割字符串
+
+str = 'this is string example...wow!!!'
+print (str.split( ))     #以空格分割
+print (str.split('i',1)) #以i分割
+print (str.split('w'))   #以w分割

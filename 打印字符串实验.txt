@@ -1,0 +1,14 @@
+要求;
+$ cd /home/shiyanlou
+$ python3 dicttest.py 100:shiyan 101:louplus 102:jack 103:lee
+ID:100 Name:shiyan
+ID:103 Name:lee
+ID:101 Name:louplus
+ID:102 Name:jack
+
+代码：
+#!/usr/bin/env python3
+import sys
+#def print_data():
+for key in sys.argv[1:]:
+    print("ID:"+key[0:3],"Name:"+key[4:8])
